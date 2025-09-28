@@ -114,8 +114,8 @@ By identifying customers likely to churn, businesses can run **targeted retentio
 Key highlights:
 - Exploratory Data Analysis (EDA) with visual insights
 - Feature engineering on customer demographics, transaction history, and engagement
-- Model building using **Decision Tree** and **Random Forest**
-- Evaluation with precision, recall, F1-score, and AUC
+- Multipled models are used: **Decision Tree**, **Random Forest**, **Logistic Regression**, **Gradient Boosting**, **SVM**
+- Evaluation with precision, recall, F1-score, and AUC, we found that **Random Forest** and **Decision Tree** are the best performers
 - Business experiment design (A/B test) and operational next steps
 
 Dataset: [E-commerce Sales Transactions (Kaggle)](https://www.kaggle.com/datasets/miadul/e-commerce-sales-transactions-dataset)
@@ -131,6 +131,7 @@ churn_prediction/
 │── results/ <- Model outputs and evaluation reports
 │── requirements.txt <- Dependencies
 │── README.md <- Project documentation
+
 ---
 
 ## ⚙️ Installation
@@ -142,14 +143,7 @@ cd churn-prediction
 # Install dependencies
 pip install -r requirements.txt
 
-# Train models
-python src/train_models.py
-
-# Predict churn on new data
-python src/predict.py --input data/new_customers.csv --output results/predictions.csv
-
-# Evaluate performance
-python src/evaluate_model.py
+---
 
 📊 Results
 
@@ -159,32 +153,33 @@ Decision Tree: Easier to interpret, slightly lower performance
 
 Feature importance: Lifetime value & recent 4-month activity are top predictors
 
-🧪 Experiment Design
-Component	Description
-Hypothesis	Targeted promotions to predicted churn customers improve ROI compared to baseline.
-Groups	Control: mass promotion; Treatment: predicted churn customers only.
-Metrics	P0: ROI (+10% target); P1/P2: engagement & conversion rates; Guardrail: churn rate.
-Conditions	Optional: segment by region.
-Timeline	Based on business cycle & campaign frequency.
-🛠 Operations
 
-Deploy model to generate daily churn probability scores.
+**🧪 Experiment Design**
 
-Segment customers for targeted retention actions.
+| **Component** | **Description** |
+|---------------|-----------------|
+| **Hypothesis** | Targeted promotions to predicted churn customers improve ROI compared to baseline. |
+| **Groups** | Control: mass promotion; Treatment: predicted churn customers only. |
+| **Metrics** | P0: ROI (+10% target); P1/P2: engagement & conversion rates; Guardrail: churn rate. |
+| **Conditions** | Optional: segment by region. |
+| **Timeline** | Based on business cycle & campaign frequency. |
 
-Continuously monitor churn rate and ROI for improvement.
+---
 
-🔮 Future Work
+**🛠 Operations**
+- Deploy model to generate daily churn probability scores.  
+- Segment customers for targeted retention actions.  
+- Continuously monitor churn rate and ROI for improvement.  
 
-Add app/web engagement & time-series features
+---
 
-Explore ensemble models (stacking RF + DT)
+**🔮 Future Work**
+- Add app/web engagement & time-series features  
+- Explore ensemble models (stacking RF + DT)  
+- Automate retraining pipeline  
 
-Automate retraining pipeline
+---
 
-Expand experiments across customer segments
-
-📜 License
-
-MIT License
+**📜 License**
+MIT License  
 
