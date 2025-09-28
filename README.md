@@ -52,25 +52,6 @@ Include time-series features and aggregated metrics.
 Modeling
 
 
-Compare performance using precision, recall, F1-score
-
-Evaluation
-
-Deployment Pipeline
-
-Generate daily churn probability scores
-
-Segment customers for targeted promotions
-
-
-4. Results
-
-Random Forest: Precision = 0.72, Recall = 0.68, F1-score = 0.70
-
-Decision Tree: Slightly lower performance but easier to interpret
-
-Feature Importance: Lifetime value and recent 4-month activity are key predictors
-
 
 # Customer Churn Prediction: End-to-End Machine Learning Project
 
@@ -83,11 +64,11 @@ This project builds an **end-to-end machine learning pipeline** to predict **cus
 By identifying customers likely to churn, businesses can run **targeted retention campaigns** that improve ROI and customer lifetime value.
 
 Key highlights:
-- Exploratory Data Analysis (EDA) with visual insights
-- Feature engineering on customer demographics, transaction history, and engagement
-- Multipled models are used: **Decision Tree**, **Random Forest**, **Logistic Regression**, **Gradient Boosting**, **SVM**
-- Evaluation with precision, recall, F1-score, and AUC, we found that **Random Forest** and **Decision Tree** are the best performers
-- Business experiment design (A/B test) and operational next steps
+1. Exploratory Data Analysis (EDA) with visual insights
+2. Feature engineering on customer demographics, transaction history, and engagement
+3. Multipled models are used: **Decision Tree**, **Random Forest**, **Logistic Regression**, **Gradient Boosting**, **SVM**
+4. Evaluation with precision, recall, F1-score, and AUC, we found that **Random Forest** and **Decision Tree** are the best performers
+5. Business experiment design (A/B test) and operational next steps
 
 Dataset: [E-commerce Sales Transactions (Kaggle)](https://www.kaggle.com/datasets/miadul/e-commerce-sales-transactions-dataset)
 
@@ -105,18 +86,6 @@ churn_prediction/
 
 ---
 
-## ⚙️ Installation
-```bash
-
-# Clone the repo
-git clone https://github.com/yourusername/churn-prediction.git
-cd churn-prediction
-
-# Install dependencies
-pip install -r requirements.txt
-```
----
-
 ## 📊 Results
 
 - Random Forest: Precision = 0.72, Recall = 0.68, F1-score = 0.70
@@ -127,7 +96,8 @@ pip install -r requirements.txt
 
 ---
 
-##🧪 Experiment Design
+
+## 🧪 Experiment Design
 
 | **Component** | **Description** |
 |---------------|-----------------|
@@ -139,14 +109,14 @@ pip install -r requirements.txt
 
 ---
 
-**🛠 Operations**
+## 🛠 Operations
 - Deploy model to generate daily churn probability scores.  
 - Segment customers for targeted retention actions.  
 - Continuously monitor churn rate and ROI for improvement.  
 
 ---
 
-**🔮 Future Work**
+## 🔮 Future Work
 - Add app/web engagement & time-series features  
 - Explore ensemble models (stacking RF + DT)  
 - Automate retraining pipeline  
