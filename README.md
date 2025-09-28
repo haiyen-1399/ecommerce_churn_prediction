@@ -71,35 +71,6 @@ Decision Tree: Slightly lower performance but easier to interpret
 
 Feature Importance: Lifetime value and recent 4-month activity are key predictors
 
-5. Next Steps: Experimentation & Operations
-
-Experiment Design (A/B Test):
-
-Component	Description
-Hypothesis	Targeted retention promotions to predicted churn customers improve ROI compared to the baseline (control) segment.
-Groups	Control: mass retention promotion; Treatment: target predicted churn customers.
-Success Metrics	P0: ROI (+10% improvement), P1/P2: engagement & conversion rates; Guardrail: churn rate.
-Other Conditions	Optional: segment by region or customer type.
-Timeline	Define based on business cycle.
-
-Operational Steps:
-
-Deploy model to generate daily churn probability tags.
-
-Segment customers based on risk score and apply targeted retention strategies.
-
-Monitor daily churn rate and ROI for continuous improvement.
-
-Future Work
-
-Integrate upper-funnel metrics (app/web engagement, conversion rate)
-
-Explore ensemble models (stacking Random Forest + Decision Tree)
-
-Deployment: 
-- Automate model retraining with new data
-
-- Expand experiment design for multi-region testing
 
 # Customer Churn Prediction: End-to-End Machine Learning Project
 
@@ -125,36 +96,38 @@ Dataset: [E-commerce Sales Transactions (Kaggle)](https://www.kaggle.com/dataset
 ## 📂 Project Structure
 
 churn_prediction/
-│── data/ <- Raw and processed data
-│── notebooks/ <- Jupyter notebooks (EDA, modeling, evaluation)
-│── src/ <- Scripts for training, prediction, evaluation
-│── results/ <- Model outputs and evaluation reports
-│── requirements.txt <- Dependencies
-│── README.md <- Project documentation
+│── data/             <- Raw and processed data
+│── notebooks/        <- Jupyter notebooks (EDA, modeling, evaluation)
+│── src/              <- Scripts for training, prediction, evaluation
+│── results/          <- Model outputs and evaluation reports
+│── requirements.txt  <- Dependencies
+│── README.md         <- Project documentation
 
 ---
 
 ## ⚙️ Installation
 ```bash
+
 # Clone the repo
 git clone https://github.com/yourusername/churn-prediction.git
 cd churn-prediction
 
 # Install dependencies
 pip install -r requirements.txt
+```
+---
+
+## 📊 Results
+
+- Random Forest: Precision = 0.72, Recall = 0.68, F1-score = 0.70
+
+- Decision Tree: Easier to interpret, slightly lower performance
+
+- Feature importance: Lifetime value & recent 4-month activity are top predictors
 
 ---
 
-📊 Results
-
-Random Forest: Precision = 0.72, Recall = 0.68, F1-score = 0.70
-
-Decision Tree: Easier to interpret, slightly lower performance
-
-Feature importance: Lifetime value & recent 4-month activity are top predictors
-
-
-**🧪 Experiment Design**
+##🧪 Experiment Design
 
 | **Component** | **Description** |
 |---------------|-----------------|
