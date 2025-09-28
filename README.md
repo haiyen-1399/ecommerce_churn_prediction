@@ -52,19 +52,17 @@ Dataset: [E-commerce Sales Transactions (Kaggle)](https://www.kaggle.com/dataset
 | **Component** | **Description** |
 |---------------|-----------------|
 | **Hypothesis** | Targeted promotions to predicted churn customers improve ROI compared to baseline. |
-| **Groups** | Control: mass promotion; Treatment: predicted churn customers only. |
+| **Groups** | Control: mass promotion; Treatment: promotion for predicted churn customers only. |
 | **Metrics** | P0: ROI (+10% target); P1/P2: promotion conversion rate, profit per user; Guardrail: churn rate. |
 | **Conditions** | Optional: segment by region. |
 | **Timeline** | Based on business cycle & campaign frequency. |
 
----
 
 ### 🛠 Operations
 - Deploy model to generate daily churn probability scores.  
 - Segment customers for targeted retention actions.  
 - Continuously monitor churn rate and ROI for improvement.  
 
----
 
 ### 🔮 Model Improvements
 - Add app/web engagement & time-series features  
