@@ -100,3 +100,27 @@ Deployment:
 - Automate model retraining with new data
 
 - Expand experiment design for multi-region testing
+
+# Customer Churn Prediction: End-to-End Machine Learning Project
+
+![Python](https://img.shields.io/badge/python-3.11-blue) ![Scikit-learn](https://img.shields.io/badge/scikit--learn-1.2.2-green) ![Pandas](https://img.shields.io/badge/pandas-1.6.0-yellow) ![Status](https://img.shields.io/badge/status-active-success)
+
+---
+
+## 📌 Project Overview
+This project builds an **end-to-end machine learning pipeline** to predict **customer churn** for an e-commerce business.  
+By identifying customers likely to churn, businesses can run **targeted retention campaigns** that improve ROI and customer lifetime value.
+
+Key highlights:
+- Exploratory Data Analysis (EDA) with visual insights
+- Feature engineering on customer demographics, transaction history, and engagement
+- Model building using **Decision Tree** and **Random Forest**
+- Evaluation with precision, recall, F1-score, and AUC
+- Business experiment design (A/B test) and operational next steps
+
+Dataset: [E-commerce Sales Transactions (Kaggle)](https://www.kaggle.com/datasets/miadul/e-commerce-sales-transactions-dataset)
+
+---
+
+## 📂 Project Structure
+
