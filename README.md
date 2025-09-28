@@ -124,3 +124,67 @@ Dataset: [E-commerce Sales Transactions (Kaggle)](https://www.kaggle.com/dataset
 
 ## 📂 Project Structure
 
+churn_prediction/
+│── data/ <- Raw and processed data
+│── notebooks/ <- Jupyter notebooks (EDA, modeling, evaluation)
+│── src/ <- Scripts for training, prediction, evaluation
+│── results/ <- Model outputs and evaluation reports
+│── requirements.txt <- Dependencies
+│── README.md <- Project documentation
+---
+
+## ⚙️ Installation
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/churn-prediction.git
+cd churn-prediction
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Train models
+python src/train_models.py
+
+# Predict churn on new data
+python src/predict.py --input data/new_customers.csv --output results/predictions.csv
+
+# Evaluate performance
+python src/evaluate_model.py
+
+📊 Results
+
+Random Forest: Precision = 0.72, Recall = 0.68, F1-score = 0.70
+
+Decision Tree: Easier to interpret, slightly lower performance
+
+Feature importance: Lifetime value & recent 4-month activity are top predictors
+
+🧪 Experiment Design
+Component	Description
+Hypothesis	Targeted promotions to predicted churn customers improve ROI compared to baseline.
+Groups	Control: mass promotion; Treatment: predicted churn customers only.
+Metrics	P0: ROI (+10% target); P1/P2: engagement & conversion rates; Guardrail: churn rate.
+Conditions	Optional: segment by region.
+Timeline	Based on business cycle & campaign frequency.
+🛠 Operations
+
+Deploy model to generate daily churn probability scores.
+
+Segment customers for targeted retention actions.
+
+Continuously monitor churn rate and ROI for improvement.
+
+🔮 Future Work
+
+Add app/web engagement & time-series features
+
+Explore ensemble models (stacking RF + DT)
+
+Automate retraining pipeline
+
+Expand experiments across customer segments
+
+📜 License
+
+MIT License
+
