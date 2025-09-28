@@ -1,2 +1,17 @@
-# ecommerce_churn_prediction
-An end-to-end DS project that helps to predict churn customers and suggest experimental and business operational next steps
+# Churn Customer Prediction in Ecommerce
+
+Table of Contents
+
+- Project Overview
+
+- Data
+
+- Methodology
+
+- Installation
+
+- Usage
+
+- Results
+
+- Future Work
